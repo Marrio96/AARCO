@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CotizamaticoDemo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="consumo.js"></script>
+</head>
+
+<body>
+    <main>
+        <div
+            class="container border border-primary p-1 p-lg-4 bg-white w-80 ml-auto mr-auto mt-2 mb-2 mt-lg-3 mb-lg-2 rounded shadow">
+            <div class="row align-items-stretch">
+                <div class="col">
+
+                    <div class="row align-items-stretch  mb-4 mb-lg-3 p-2">
+
+                        <div class="col mb-auto mt-auto text-center ">
+                            <h1 class="fw-bold mb-auto mt-auto  text-dark letra">Vehículo</h1>
+                        </div>
+                    </div>
+
+                    <form class="row" id="formularioRegistro">
+                        <!-- Nombre del usuarios -->
+                        <label class="col-3 text-center col-form-label font-weight-bold">Marca:
+                        </label>
+
+                        <div class="col-7  mr-auto ml-auto mb-3">
+
+                            <select class="form-control mb-auto mt-auto" id="marca"
+                                style="height: 2em;border-color: black;">
+                                <option value=0 selected>Seleccione una marca</option>
+                                <option value=2 selected>Seleccione una marca</option>
+                            </select>
+                        </div>
+                        
+                        <label class="col-3 text-center col-form-label font-weight-bold">Submarca:
+                        </label>
+
+                        <div class="col-7  mr-auto ml-auto mb-3">
+
+                            <select class="form-control mb-auto mt-auto" id="submarca"
+                                style="height: 2em;border-color: black;">
+                                <option value=0 selected>Seleccione una submarca</option>
+
+                            </select>
+                        </div>
+
+
+                        <label class="col-3 text-center col-form-label font-weight-bold">Modelo:
+                        </label>
+
+                        <div class="col-7  mr-auto ml-auto mb-3">
+
+                            <select class="form-control mb-auto mt-auto" id="modelo"
+                                style="height: 2em;border-color: black;">
+                                <option value=0 selected>Seleccione un modelo</option>
+
+                            </select>
+                        </div>
+
+                        <label class="col-3 text-center col-form-label font-weight-bold">Descripción:
+                        </label>
+
+                        <div class="col-7  mr-auto ml-auto mb-3">
+
+                            <select class="form-control mb-auto mt-auto" id="descripcion"
+                                style="height: 2em;border-color: black;">
+                                <option value=0 selected>Seleccione una descripción</option>
+
+                            </select>
+                        </div>
+
+
+                        
+
+                        <!-- domiicilio -->
+                        <h2 class="col-12 text-center fw-bold col-form-label font-weight-bold">Domicilio </h2>
+
+                        
+                        <label class="col-3 text-center col-form-label font-weight-bold">Código Postal:
+                        </label>
+
+                        <div class="col-7 mr-auto ml-auto mb-3">
+                            <input id="cp" type="number" class="form-control"
+                                placeholder="Código postal" aria-label="direccion"
+                                aria-describedby="basic-addon1" style="height: 2em;border-color:#000;" required>
+                        </div>
+                        
+                        <label class="col-3 text-center col-form-label font-weight-bold">Estado:
+                        </label>
+
+                        <div class="col-7 mr-auto ml-auto mb-3">
+                            <input id="estado" type="text" class="form-control"
+                                placeholder="Estado" aria-label="Estado"
+                                aria-describedby="basic-addon1" style="height: 2em;border-color:#000;" required>
+                        </div>
+
+
+                        <label class="col-3 text-center col-form-label font-weight-bold">Municipio:
+                        </label>
+
+                        <div class="col-7 mr-auto ml-auto mb-3">
+                            <input id="Municipio" type="text" class="form-control"
+                                placeholder="Municipio" aria-label="Municipio"
+                                aria-describedby="basic-addon1" style="height: 2em;border-color:#000;" required>
+                        </div>
+                        
+                        <label class="col-3 text-center col-form-label font-weight-bold">Colonia:
+                        </label>
+
+                        <div class="col-7 mr-auto ml-auto mb-3">
+                            <input id="Colonia" type="text" class="form-control"
+                                placeholder="Colonia" aria-label="Colonia"
+                                aria-describedby="basic-addon1" style="height: 2em;border-color:#000;" required>
+                        </div>
+                        
+
+                        <h2 class="col-12 text-center fw-bold col-form-label font-weight-bold">Persona </h2>
+
+                        <label class="col-3 text-center col-form-label font-weight-bold">Fecha de nacimiento:
+                        </label>
+
+                        <div class="col-7 mr-auto ml-auto mb-3">
+                            <input id="fecha" type="date" class="form-control"
+                                placeholder="Fecha de nacimiento
+                                " aria-label="fecha"
+                                aria-describedby="basic-addon1" style="height: 2em;border-color:#000;" required>
+                        </div>
+                        
+                        <label class="col-3 text-center col-form-label font-weight-bold">Genero:
+                        </label>
+
+                        <div class="col-7  mr-auto ml-auto mb-3">
+
+                            <select class="form-control mb-auto mt-auto" id="genero"
+                                style="height: 2em;border-color: black;">
+                                <option value=0 selected>Seleccione un genero</option>
+                                <option value="M" >Masculino</option>
+                                <option value="F" >Femenino</option>
+
+                            </select>
+                        </div>
+
+                        <!--Botones-->
+                        <div class="col-12 justify-content-between text-center">
+                            <button type="submit" id="registrame"
+                                class="btn btn-primary  rounded-top text-white ml-auto  mr-auto">
+                                <h5><i></i> Cotizar</h5>
+                            </button>
+                        </div>
+                        <!--Cierre Botones-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Cierre del conteiner-->
+    </main>
+</body>
+
+</html>
